@@ -13,17 +13,17 @@ window.addEventListener("scroll", () =>{
 
 /*------------------- theme colors -------------------  */
 // Define the alternateStyle array containing style elements
-const alternateStyle = document.querySelectorAll("link[rel='alternate stylesheet']");
+const alternateStyle = document.querySelectorAll(".alternate-style");
 
-// Define the setActiveStyle function
 function setActiveStyle(color) {
-    alternateStyle.forEach((style) => {
-        if (color === style.getAttribute("title")) {
-            style.removeAttribute("disabled");
-        } else {
-            style.setAttribute("disabled", "true");
+    alternateStyle.forEach((style) =>{
+        if(color === style.getAttribute("title")){
+            style.removeAttribute("disabled")
         }
-    });
+        else{
+            style.setAttribute("disabled", "true")
+        }
+    })
 }
 
 /*------------------- dark mode -------------------  */
